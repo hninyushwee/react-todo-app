@@ -1,0 +1,393 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap");
+* {
+  font-family: "Roboto Slab", serif;
+}
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+/* For Navbar Section */
+.navbar {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  height: 55px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  background-color: #e2e8f0a9;
+  position: fixed;
+  width: 100%;
+  top: 0;
+}
+.logoTab {
+  display: flex;
+  align-items: center;
+}
+.logo {
+  width: 2.8em;
+  height: 2.8em;
+  border-radius: 50%;
+  background-color: aquamarine;
+  border: 1px solid rgb(171, 104, 226);
+  cursor: pointer;
+}
+.pageName {
+  padding: 0 5px;
+  cursor: pointer;
+}
+.logo:hover {
+  transform: rotate(360deg);
+  transition: all 2s;
+}
+.todo,
+.register,
+.convert {
+  position: relative;
+  font-size: 17px;
+  padding: 0 7px;
+  margin: 0 7px;
+  cursor: pointer;
+  /* border-bottom: 2px solid black; */
+  line-height: 35px;
+}
+.todo::after,
+.register::after,
+.convert::after {
+  position: absolute;
+  content: "";
+  width: 0%;
+  left: 0;
+  height: 3px;
+  background-color: #9933ff;
+  transition: all 0.3s;
+  bottom: -2px;
+}
+.todo:hover:after,
+.register:hover:after,
+.convert:hover:after {
+  width: 100%;
+}
+.menuTab {
+  display: flex;
+  align-items: center;
+}
+
+/* For Main Section */
+.body-container{
+  min-height: 100vh;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 55px;
+}
+.card,
+.form-card,
+.data-card {
+  width: 27vw;
+  border: 1px solid #0707076c;
+  border-radius: 5px;
+  box-shadow: 0 0 7px rgba(20, 20, 20, 0.2);
+  margin-bottom: 20px;
+  background-color: #fff;
+}
+
+.todo-box,
+.form-box,
+.convert-box {
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+}
+/* For inputs box */
+input {
+  padding: 5px;
+  border: 2px solid #b9b9b9;
+  border-radius: 4px;
+  font-size: 15px;
+}
+input:focus {
+  border: 2px solid #9933ff;
+  outline: none;
+}
+/* For buttons */
+.btn {
+  background-color: #7a2aca;
+  border: 2px solid #7a2aca;
+  color: #fff;
+  padding: 5px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.btn:hover {
+  background-color: #fff;
+  color: #000;
+}
+/* For Home Tab */
+.content {
+  width: 58%;
+}
+
+.card1,
+.card2,
+.card3 {
+  border: 1px solid #b9b9b9;
+  background-color: #fff;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+.card2 {
+  background-color: #ccfbf1;
+}
+.card1 {
+  background: #e9d5ff;
+}
+.card3 {
+  background-color: #fecdd3;
+}
+.title {
+  text-align: center;
+  margin: 0 auto;
+  padding: 10px;
+  border-bottom: 1px solid #4141415d;
+}
+.body {
+  padding: 10px 30px;
+  text-indent: 30px;
+}
+/* For Todo Tab */
+.add-todo-card {
+  margin-top: 15px;
+  display: flex;
+}
+.add-todo-input {
+  width: 100%;
+  border-right: none;
+  border-radius: 4px 0 0 4px;
+}
+.add-todo-input:focus {
+  border-right: none;
+}
+.add-btn {
+  border-radius: 0 4px 4px 0;
+}
+.todo-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 10px;
+  border-bottom: 1px solid #b9b9b9;
+}
+.miss-error {
+  background-color: #f84b4b;
+  border-radius: 5px;
+  padding: 5px 20px;
+  margin-top: 5px;
+}
+.delete-btn {
+  background-color: #fff;
+  border: none;
+}
+
+.trash-icon {
+  cursor: pointer;
+  font-size: 17px;
+  color: #f30303;
+}
+input[type="checkbox"]:checked ~ span {
+  text-decoration: line-through;
+}
+/* For Registration Tab */
+.register-box{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+.form-card, .data-card{
+  width: 30vw;
+}
+.data-card {
+  text-align: center;
+  padding: 10px 0 20px;
+}
+.form-box {
+  padding-top: 10px;
+}
+.label-register-for {
+  margin: 17px 0 10px;
+}
+.register-btn {
+  margin-top: 15px;
+}
+.error {
+  color: #df0202;
+  font-size: 14px;
+  font-weight: bold;
+}
+.register-data {
+  text-align: left;
+  list-style-type: square;
+}
+.register-data li {
+  margin: 20px;
+}
+.color-card {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  gap: 0.3em;
+  flex-wrap: wrap;
+}
+.color {
+  width: 1.5em;
+  height: 1.5em;
+  border: 1px solid #5a5a5a;
+  border-radius: 3px;
+  position: relative;
+  -webkit-appearance: none;
+  appearance: none;
+  cursor: pointer;
+}
+.color:checked:after {
+  position: absolute;
+  content: "✔";
+  top: -1px; 
+  left: 4px;
+}
+.random-color {
+  padding: 0;
+}
+.white{
+  background: #fff;
+}
+.grey {
+  background: #64748b;
+}
+.red {
+  background: #f87171;
+}
+.green {
+  background-color: #4ade80;
+}
+.yellow {
+  background-color: #fdba74;
+}
+.blue {
+  background-color: #22d3ee;
+}
+.pink {
+  background-color: #f9a8d4;
+}
+.purple {
+  background-color: #c084fc;
+}
+.close-btn {
+  cursor: pointer;
+  padding: 5px 20px;
+}
+/* For Converter Tab*/
+.temperature {
+  margin-bottom: 12px;
+}
+
+.changeTo {
+  text-align: center;
+  padding: 5px;
+  margin: 15px auto 10px;
+  background-color: #9933ff;
+  border-radius: 50%;
+  color: white;
+  text-shadow: 2px 2px 2px rgb(54, 54, 54);
+  box-shadow: 1px 1px 2px rgb(54, 54, 54);
+  font-size: 16px;
+}
+.changeTo:hover {
+  transform: rotate(360deg);
+  transition: all 1s;
+}
+/* For Checkbox */
+.theme {
+  display: flex;
+}
+.theme input[type="checkbox"] {
+  height: 0;
+  width: 0;
+  visibility: hidden;
+}
+.theme label {
+  --size: 40px;
+  width: calc(var(--size));
+  height: calc(var(--size) / 2);
+  background: #000;
+  border-radius: 100px;
+  position: relative;
+  cursor: pointer;
+}
+.theme label:after {
+  content: "";
+  background: #fff;
+  position: absolute;
+  width: calc(50% - 5%);
+  height: calc(100% - 11%);
+  top: 6%;
+  left: 2.5%;
+  border-radius: 90px;
+  transition: 0.3s;
+}
+.theme input:checked + label {
+  background-color: #b9b9b9;
+}
+.theme input:checked + label:after {
+  left: calc(100% - 2.5%);
+  transform: translateX(-100%);
+}
+.theme label:active:after {
+  width: 55%;
+}
+@media (max-width: 450px) {
+  .data-card,
+  .form-card,
+  .card,
+  .content {
+    width: 75vw;
+  }
+  .todo,
+  .register,
+  .convert {
+    font-size: 11px;
+    padding: 2px;
+  }
+  .pageName {
+    font-size: 14px;
+  }
+  h3 {
+    font-size: 13px;
+  }
+}
+@media (max-width: 790px) {
+  .data-card,
+  .form-card,
+  .card,
+  .content {
+    width: 45vw;
+  }
+  .todo,
+  .register,
+  .convert {
+    font-size: 14px;
+  }
+  .pageName {
+    font-size: 16px;
+  }
+  h3 {
+    font-size: 15px;
+  }
+}
